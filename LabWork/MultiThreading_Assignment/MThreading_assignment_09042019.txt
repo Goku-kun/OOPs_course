@@ -1,0 +1,28 @@
+
+
+Assignment based on Multithreading
+
+  Submission Deadline 15/04/2019 for H1 ; 16/04/2019 for H2 and 18/04/2019 for H3 respectively
+
+Q1. Write a Java Program (WAJP) to create multiple(10) Threads by extending Thread class, 
+    execute program atleast three times and note its output in lab assignment book.
+
+Q2. WAJP to create multiple(10) Threads by implementing Runnable interface & execute
+    program atleast three times and note its output in lab assignment book..
+
+Q3. WAJP to to add two numbers in 10 different Threads  by taking input from user and analysis its output. 
+
+Q4. WAJP to create multiple(10) Threads by either extending Thread class or implementing Runnable interface and 
+    set priorities(from 1 to 10) to each Thread.
+Q5. Write a Java Program (WAJP) to to slove producer consumer problem using Multi Threading.
+
+Q6. WAJP to display all running Threads.
+
+Q7. WAJP to show use sleep(), wait(), notify(), notifyAll() to faciliate communication among threads.
+
+Q8. WAJP to show use stop(), ,suspend(), and resume() methods of Thread class. 
+
+Q9. WAJP to create user defined Exception and 5 Threads in same program
+    hint:  class UserExceptionThread extends Thread , implements Runnable{}.
+Q10. WAJP to solve Traffic Light Problem using multithreading.
+     use concept of Thread Synchonization
