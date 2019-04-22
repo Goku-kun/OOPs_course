@@ -29,14 +29,14 @@ class Threader implements Runnable {
 }
 
 /*
-FYI Threads
-Thread priority is used by the system to decide which thread to run when there are more threads ready to run than there are processors. In that situation, higher priority threads get to run first.
+FYI Threads:
+* Thread priority is used by the system to decide which thread to run when there are more threads ready to run than there are processors. In that situation, higher priority threads get to run first.
 
-In such a case it's plausible that either:
+* In such a case it's plausible that either:
 
-The low priority thread has already started before the high priority thread is ready to run, or,
-You have sufficient processors that both threads can run simultaneously.
-Thread priority is not a tool that can be used to ensure order of execution. You need to use thread synchronization objects for that.
+* The low priority thread has already started before the high priority thread is ready to run, or,
+* You have sufficient processors that both threads can run simultaneously.
+* Thread priority is not a tool that can be used to ensure order of execution. You need to use thread synchronization objects for that.
 
-In general, it is rather rare that you set the priority of a thread. Generally it is best to let the operating system decide how to schedule threads.
+* In general, it is rather rare that you set the priority of a thread. Generally it is best to let the operating system decide how to schedule threads.
 */
