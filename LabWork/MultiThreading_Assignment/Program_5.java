@@ -1,6 +1,6 @@
 class ProCon {
-  int val;
-  boolean flag = false;
+  volatile int val;
+  volatile boolean flag = false;
   synchronized int get() {
     while (flag == false) {
       try{
@@ -22,10 +22,13 @@ class ProCon {
     notifyAll();
   }
 }
-class Producer extends Thread {
+class Producer implements Runnable {
   ProCon obj;
+  Thread t;
   Producer(ProCon p) {
     obj = p;
+    t = new Thread(this);
+    t.start();
   }
   public void run() {
     for (int i = 1; i<6 ; i++ ) {
@@ -39,10 +42,13 @@ class Producer extends Thread {
     }
   }
 }
-class Consumer extends Thread {
+class Consumer implements Runnable {
   ProCon obj;
+  Thread t;
   Consumer(ProCon p) {
+    t = new Thread(this);
     obj = p;
+    t.start();
   }
   public void run() {
     int val;
@@ -60,9 +66,7 @@ class Consumer extends Thread {
 public class Program_5 {
   public static void main(String[] args) {
     ProCon pc = new ProCon();
-    Producer p = new Producer(pc);
-    Consumer c = new Consumer(pc);
-    p.start();
-    c.start();
+    new Producer(pc);
+    new Consumer(pc);
   }
 }
